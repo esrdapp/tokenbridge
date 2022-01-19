@@ -12,7 +12,9 @@ cp -a ../tokenbridge-contracts ./tokenbridge/contracts/
 if this worked and copied correctly, your "tokenbridge/contracts/" folder will now be populated with "contracts", "deploy", "node_modules" folders, as well as a package.json file
 
 9. cd deployment
-10. edit hosts.yml to suit
+10. edit hosts.yml to suit the deployment, and add in the private key of the validator (more details on hosts.yml can be found here: https://docs.tokenbridge.net/amb-bridge/arbitrary-message-bridge-deployment/2-tokenbridge-oracle-instance)
+11. cd group_vars
+12. edit hpb_xdai.yml file to suit - note the file name ("hpb_xdai" is the first line in hosts.yml from the previous step.
 
 
 9. cd oracle
