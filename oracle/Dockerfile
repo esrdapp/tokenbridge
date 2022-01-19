@@ -19,7 +19,7 @@ RUN apt-get update && \
 
 WORKDIR /tokenbridge
 COPY package.json .
-COPY --from=contracts /mono/contracts/build ./contracts/build
+COPY --from=contracts /tokenbridge/contracts/build ./contracts/build
 COPY commons/package.json ./commons/
 COPY oracle/package.json ./oracle/
 COPY yarn.lock .
