@@ -11,12 +11,16 @@ cp -a ../tokenbridge-contracts ./tokenbridge/contracts/
 
 if this worked and copied correctly, your "tokenbridge/contracts/" folder will now be populated with "contracts", "deploy", "node_modules" folders, as well as a package.json file
 
+9. cd deployment
+10. edit hosts.yml to suit
+
+
 9. cd oracle
 10. edit the Dockerfile (nano Dockerfile) line 26 by commenting out the line with #
 #RUN NOYARNPOSTINSTALL=1 yarn install --frozen-lockfile --production (this avoids the scripting error later on)
 
 10. mv .envexample .env
-11. adjust the .env file as necessary, ensuring all values are correct and the validator address private key has been added. More details on the .env fields can be found here: 
+11. adjust the .env file as necessary, ensuring all values are correct and the validator address private key has been added. More details on the .env fields can be found here (in the "Oracle Configuration" section: https://github.com/esrdapp/tokenbridge/blob/master/CONFIGURATION.md 
 
 11. run the following command, adding in the validator wallet and the private key from deploymentUtils.js that can be located in the file when you originally deployed tokenbridge-contracts (in tokenbridge-contracts/src/deploymentUtils.js)
 
