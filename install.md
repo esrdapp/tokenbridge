@@ -14,16 +14,18 @@ if this worked and copied correctly, your "tokenbridge/contracts/" folder will n
 9. cd deployment
 10. edit hosts.yml to suit the deployment, and add in the private key of the validator (more details on hosts.yml can be found here: https://docs.tokenbridge.net/amb-bridge/arbitrary-message-bridge-deployment/2-tokenbridge-oracle-instance)
 11. cd group_vars
-12. edit hpb_xdai.yml file to suit - note the file name ("hpb_xdai" is the first line in hosts.yml from the previous step.
+12. edit hpb_xdai.yml file to suit - (note the file name "hpb_xdai" is the first line in hosts.yml from the previous step) - once again, refer to https://docs.tokenbridge.net/amb-bridge/arbitrary-message-bridge-deployment/2-tokenbridge-oracle-instance for details on editing the yml file.
+13. navigate back to the tokenbridge/oracle folder
 
-
-9. cd oracle
-10. edit the Dockerfile (nano Dockerfile) line 26 by commenting out the line with #
+14. edit the Dockerfile (nano Dockerfile) line 26 by commenting out the line with #
 #RUN NOYARNPOSTINSTALL=1 yarn install --frozen-lockfile --production (this avoids the scripting error later on)
 
-10. mv .envexample .env
-11. adjust the .env file as necessary, ensuring all values are correct and the validator address private key has been added. More details on the .env fields can be found here (in the "Oracle Configuration" section: https://github.com/esrdapp/tokenbridge/blob/master/CONFIGURATION.md 
+15. mv .envexample .env
+16. adjust the .env file as necessary, ensuring all values are correct and the validator address private key has been added. More details on the .env fields can be found here (in the "Oracle Configuration" section: https://github.com/esrdapp/tokenbridge/blob/master/CONFIGURATION.md 
 
-11. run the following command, adding in the validator wallet and the private key from deploymentUtils.js that can be located in the file when you originally deployed tokenbridge-contracts (in tokenbridge-contracts/src/deploymentUtils.js)
+17. run the following command, remembering to add in the validator wallet and the private key from deploymentUtils.js that can be located in the file when you originally deployed tokenbridge-contracts (in tokenbridge-contracts/src/deploymentUtils.js)
 
 env ORACLE_VALIDATOR_ADDRESS=<address> env ORACLE_VALIDATOR_ADDRESS_PRIVATE_KEY=<private key>  docker-compose -f docker-compose-build.yml -f docker-compose.yml up -d --build
+  
+18. check the bridge is running with "docker-compose logs"
+  
