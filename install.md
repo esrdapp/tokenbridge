@@ -15,6 +15,9 @@ if this worked and copied correctly, your "tokenbridge/contracts/" folder will n
 10. edit the Dockerfile (nano Dockerfile) line 26 by commenting out the line with #
 #RUN NOYARNPOSTINSTALL=1 yarn install --frozen-lockfile --production (this avoids the scripting error later on)
 
+10. mv .envexample .env
+11. adjust the .env file as necessary, ensuring all values are correct and the validator address private key has been added. More details on the .env fields can be found here: 
+
 11. run the following command, adding in the validator wallet and the private key from deploymentUtils.js that can be located in the file when you originally deployed tokenbridge-contracts (in tokenbridge-contracts/src/deploymentUtils.js)
 
 env ORACLE_VALIDATOR_ADDRESS=<address> env ORACLE_VALIDATOR_ADDRESS_PRIVATE_KEY=<private key>  docker-compose -f docker-compose-build.yml -f docker-compose.yml up -d --build
