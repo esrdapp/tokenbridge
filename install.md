@@ -28,5 +28,7 @@ if this worked and copied correctly, your "tokenbridge/contracts/" folder will n
 - env ORACLE_VALIDATOR_ADDRESS=<address> 
 - env ORACLE_VALIDATOR_ADDRESS_PRIVATE_KEY=<private key>  docker-compose -f docker-compose-build.yml -f docker-compose.yml up -d --build
   
-18. check the bridge is running with "docker-compose logs"
+18. inside the oracle folder run npm install  
+  
+19. check the bridge is running with "docker-compose logs"
   
