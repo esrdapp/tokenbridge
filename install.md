@@ -23,7 +23,7 @@ if this worked and copied correctly, your "tokenbridge/contracts/" folder will n
 15. mv .envexample .env
 16. adjust the .env file as necessary, ensuring all values are correct and the validator address private key has been added. More details on the .env fields can be found here (in the "Oracle Configuration" section: https://github.com/esrdapp/tokenbridge/blob/master/CONFIGURATION.md 
 
-17. run the following command, remembering to add in the validator wallet and the private key from deploymentUtils.js that can be located in the file when you originally deployed tokenbridge-contracts (in tokenbridge-contracts/src/deploymentUtils.js)
+17. run the following command, remembering to add in the validator wallet and the private key from deploymentUtils.js that can be located in the file when you originally deployed tokenbridge-contracts (to check, you can use nano ../../tokenbridge-contracts/deploy/src/deploymentUtils.js)
 
 env ORACLE_VALIDATOR_ADDRESS=<address> env ORACLE_VALIDATOR_ADDRESS_PRIVATE_KEY=<private key>  docker-compose -f docker-compose-build.yml -f docker-compose.yml up -d --build
   
