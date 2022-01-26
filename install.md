@@ -15,7 +15,7 @@ if this worked and copied correctly, your "tokenbridge/contracts/" folder will n
 10. edit hosts.yml to suit the deployment, and add in the private key of the ORACLE_VALIDATOR_ADDRESS (more details on hosts.yml can be found here: https://docs.tokenbridge.net/amb-bridge/arbitrary-message-bridge-deployment/2-tokenbridge-oracle-instance)
 11. cd group_vars
 12. edit hpb_xdai.yml file to suit - (note the file name "hpb_xdai" is the first line in hosts.yml from the previous step) - once again, refer to https://docs.tokenbridge.net/amb-bridge/arbitrary-message-bridge-deployment/2-tokenbridge-oracle-instance for details on editing the yml file.
-13. navigate back to the tokenbridge/oracle folder
+13. cd ../../oracle
 
 14. edit the Dockerfile (nano Dockerfile) line 26 by commenting out the line with #
 #RUN NOYARNPOSTINSTALL=1 yarn install --frozen-lockfile --production (this avoids the scripting error later on)
