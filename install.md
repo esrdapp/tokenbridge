@@ -5,9 +5,9 @@
 5. cd tokenbridge
 6. yarn init
 7. yarn install
-8. you will have an empty "contracts" folder. We need to populate this folder with the tokenbridge contracts we already deployed:
+8. you will have an empty "contracts" folder. We need to populate this folder with all of the tokenbridge-contracts we've already deployed:
 
-cp -a ../tokenbridge-contracts ./tokenbridge/contracts/
+cp -avr ../tokenbridge-contracts/* ./contracts
 
 if this worked and copied correctly, your "tokenbridge/contracts/" folder will now be populated with "contracts", "deploy", "node_modules" folders, as well as a package.json file
 
